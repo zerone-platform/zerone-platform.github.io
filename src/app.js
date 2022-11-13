@@ -1,7 +1,7 @@
 import { mapListToDOMElements } from "./domInteractions.js";
 import { sendFormToAPI } from "./requests.js";
 
-class Tweeby {
+class ZerOne {
     constructor () {
         this.viewElements = {};
         this.InitializeApp();
@@ -32,7 +32,7 @@ class Tweeby {
         let contactForm = this.viewElements.contactForm
         let msg = `Dzień dobry.\n\nKontaktuje się w sprawie współpracy długoterminowej w pakiecie "${event.target.dataset.offerName.toUpperCase()}".\nProszę o więcej informacji w odpowiedzi na maila podanego w formularzu.`;
         contactForm.scrollIntoView({behavior: 'smooth', block: 'center'});
-        contactForm.childNodes[13].value = msg;
+        contactForm.message.value = msg;
     };
 
     sendEmail = event => {
@@ -50,4 +50,4 @@ class Tweeby {
     };
 };
 
-document.addEventListener('DOMContentLoaded', new Tweeby());
+document.addEventListener('DOMContentLoaded', new ZerOne());
