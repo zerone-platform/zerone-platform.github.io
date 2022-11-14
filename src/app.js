@@ -1,4 +1,4 @@
-import { mapListToDOMElements } from "./domInteractions.js";
+import { mapListToDOMElements, changeScrollBtn, slideAsideNav } from "./domInteractions.js";
 import { sendFormToAPI } from "./requests.js";
 
 class ZerOne {
@@ -19,13 +19,18 @@ class ZerOne {
 
         this.viewElements = mapListToDOMElements(listOfIds, 'id');
         this.offerButtons = mapListToDOMElements(listOfButtons, 'data-offer-name');
+        this.listOfLinks = Array.from(document.querySelectorAll("aside a"));
     };
 
     setupListeners = () => {
         Object.keys(this.offerButtons).forEach(offerName => {
             this.offerButtons[offerName].addEventListener('click', this.goToContactForm);
         });
-        this.viewElements.contactForm.addEventListener('submit', this.sendEmail)
+        window.addEventListener('scroll', this.displayScrollBtn);
+        this.listOfLinks.forEach(link => link.addEventListener('click', this.showAsideNav));
+        this.viewElements.contactForm.addEventListener('submit', this.sendEmail);
+        this.viewElements.goTop.addEventListener('click', this.backTop);
+        this.viewElements.menuBtn.addEventListener('click', this.showAsideNav);
     };
 
     goToContactForm = event => {
@@ -47,6 +52,24 @@ class ZerOne {
         };
         
         sendFormToAPI(templateParams);
+    };
+
+    displayScrollBtn = event => {
+        const black = this.viewElements.goTop.children[0];
+        const white = this.viewElements.goTop.children[1];
+
+        changeScrollBtn(black, white);
+    };
+
+    backTop = event => {
+        this.viewElements.navigation.scrollIntoView({behavior: 'smooth', block: 'start'});
+    };
+
+    showAsideNav = event => {
+        const about = this.viewElements.about;
+        const aside = this.viewElements.asideNavigation;
+
+        slideAsideNav(about, aside);
     };
 };
 

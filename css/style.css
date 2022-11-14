@@ -10,13 +10,17 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
 
 h1 {
   font-size: 34px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 h2 {
@@ -50,8 +54,8 @@ section {
   background-color: var(--indigo);
 }
 
-.btn:active {
-  transform: scale(0.95);
+.btn:active, .go-top:active, .navbar__buttons > img:active {
+  transform: scale(0.9);
 }
 
 .connector {
@@ -60,11 +64,15 @@ section {
 }
 
 .connector--top {
-  background: linear-gradient(to bottom, #fdeff9, var(--anti-white));
+  background: linear-gradient(to bottom, 
+  rgba(253, 239, 249, 0.85), 
+  var(--anti-white, 0.85));
 }
 
 .connector--bot {
-  background: linear-gradient(to top, #fdeff9, var(--anti-white));
+  background: linear-gradient(to top, 
+  rgba(253, 239, 249, 0.85), 
+  var(--anti-white, 0.85));
 }
 
 .navbar {
@@ -73,27 +81,81 @@ section {
   background-color: white;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.navbar__links {
-  width: 100%;
+.go-top {
+  position: fixed;
+  width: fit-content;
+  right: 10px;
+}
+
+.go-top img {
+  width: 35px;
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__buttons {
+  width: 340px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.navbar__links > img {
-  width: 32px;
+.navbar__buttons > img {
+  width: 24px;
+  height: 32px;
 }
 
-.navbar__links > a {
+.navbar__buttons > a {
   text-decoration: none;
 }
 
+.aside-nav {
+  width: 100%;
+  position: absolute;
+  top: 72px;
+  left: -100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.9);
+  transition-duration: .5s;
+  transition-timing-function: ease-in;
+  transition-delay: .5s;
+}
+
+.aside-nav__links {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.aside-nav__links a {
+  font-size: 18px;
+  color: var(--lavender-blush);
+  text-decoration: none;
+}
+
+.aside-nav__links a:hover {
+  border-bottom: 1px solid var(--lavender-blush);
+}
+
 .about {
-  background: linear-gradient(to bottom, #03001e, #7303c0, #ec38bc, #fdeff9);
+  background: linear-gradient(to bottom,
+   rgba(3, 0, 31, 0.85), 
+   rgba(115, 3, 192, 0.85), 
+   rgba(236, 56, 188, 0.85), 
+   rgba(253, 239, 249, 0.85)
+  );
   color: var(--lavender-blush);
   padding-bottom: 40px;
+  position: relative;
+  top: 0;
+  z-index: -1;
+  transition: .5s;
 }
 
 .about h2 {
@@ -102,7 +164,7 @@ section {
 
 .about h3 {
   font-size: 24px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .about p {
@@ -121,6 +183,7 @@ section {
   width: 100%;
   background-color: white;
   margin: 30px 0;
+  border-radius: 5px;
 }
 
 .service__title {
@@ -150,7 +213,7 @@ section {
 }
 
 .pricing {
-  background-color: var(--anti-white);
+  background-color: var(--anti-white, 0.85);
   font-family: "Lato", sans-serif;
 }
 
@@ -289,7 +352,7 @@ section {
 }
 
 .ceo {
-  background-color: var(--anti-white);
+  background-color: var(--anti-white, 0.85);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -330,7 +393,7 @@ section {
 .team {
   background-color: var(--cetacean-blue);
   font-family: "Open Sans", sans-serif;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .team h2 {
@@ -341,18 +404,19 @@ section {
 
 .team__list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100%;
+  overflow: auto;
 }
 
 .team__member {
   height: 526px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: white;
   padding: 30px 10px;
-  margin: 12px 0;
+  margin: 0 12px;
 }
 
 .team__member h3 {
@@ -387,7 +451,7 @@ section {
 }
 
 .projects {
-  background-color: var(--anti-white);
+  background-color: var(--anti-white, 0.85);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -414,7 +478,12 @@ section {
 }
 
 footer {
-  background: linear-gradient(to top, #03001e, #7303c0, #ec38bc, #fdeff9);
+  background: linear-gradient(to top,
+   rgba(3, 0, 31, 0.85), 
+   rgba(115, 3, 192, 0.85), 
+   rgba(236, 56, 188, 0.85), 
+   rgba(253, 239, 249, 0.85)
+  );
   display: flex;
   flex-direction: column;
   align-items: center;

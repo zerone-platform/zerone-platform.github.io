@@ -5,22 +5,63 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="ZerOne - Marcin Chudzik"
+	<meta name="description" 
+	content="Indywidualne projekty stron, serwisów i sklepów Internetowych.
+	 Tworzenie oraz utrzymywanie serwisów Internetowych. Pomoc na zamówienie lub współpraca długoterminowa.">
+	<meta name="keywords" 
+	content="strona internetowa, serwisy internetowe, hosting, hosting strony internetowej, sklepy internetowe
+	usługi hostingowe, tworzenie stron Malbork, tworzenie stron Świecie, projekty serwisów internetowych, własna strona internetowa,
+	własny sklep internetowy, platforma internetowa">
 	<link href="./css/style.css" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 	<title>ZerOne</title>
 </head>
 
 <body>
-	<nav class="navbar">
-		<span class="navbar__links">
+	<nav id="navigation" class="navbar">
+		<span class="navbar__buttons">
+			<img id="menuBtn" src="./img/menu.png" alt="menu">
 			<h1>ZerOne</h1>
-			<img src="./img/menu.png" alt="menu">
 		</span>
+		<div id="goTop" class="go-top">
+			<img src="./img/move-up-black.png" alt="go top">
+			<img src="./img/move-up-white.png" alt="go top">
+		</div>
 	</nav>
 
-	<section class="about">
+	<aside id="asideNavigation" class="aside-nav">
 		<div class="container">
-			<h2>Bądź obecny i dołącz do sieci razem z nami.</h2>
+			<ul class="aside-nav__links">
+				<li>
+					<a href="#navigation">O firmie</a>
+				</li>
+
+				<li>
+					<a href="#pricing">Pakiety</a>
+				</li>
+
+				<li>
+					<a href="#strategy">Strategia</a>
+				</li>
+
+				<li>
+					<a href="#team">Zespół</a>
+				</li>
+
+				<li>
+					<a href="#projects">Projekty</a>
+				</li>
+
+				<li>
+					<a href="#contact">Kontakt</a>
+				</li>
+			</ul>
+		</div>
+	</aside>
+
+	<section id="about" class="about">
+		<div class="container">
+			<h2>Bądź obecny i dołącz do sieci razem z nami</h2>
 			<p>
 				Obecnie wszystko znajduję się w Internecie. To tam najczęściej szukamy
 				odpowiedzi na nachodzące nas potrzeby. Dlatego chcemy byś był
@@ -89,7 +130,7 @@
 
 	<div class="connector connector--top"></div>
 
-	<section class="pricing">
+	<section id="pricing" class="pricing">
 		<div class="container">
 			<h2>Oferty stałej współpracy</h2>
 			<p>*cena za pakiet w abonamencie mesięcznym*</p>
@@ -158,7 +199,7 @@
 		</div>
 	</section>
 
-	<section class="strategy">
+	<section id="strategy" class="strategy">
 		<div class="container">
 			<h2>Jak będzie wyglądać nasza współpraca?</h2>
 
@@ -211,7 +252,7 @@
 		</div>
 	</section>
 
-	<section class="team">
+	<section id="team" class="team">
 		<div class="container">
 			<h2>Poznaj nasz zespół</h2>
 			<ul class="team__list">
@@ -239,7 +280,7 @@
 		</div>
 	</section>
 
-	<section class="projects">
+	<section id="projects" class="projects">
 		<div class="container">
 			<h2>Projekty podglądowe</h2>
 			<div class="projects__gallery">
@@ -255,7 +296,7 @@
 
 	<div class="connector connector--bot"></div>
 
-	<footer>
+	<footer id="contact">
 		<div class="container">
 			<form class="contact-form" id="contactForm" method="post" action=".">
 				<input type="hidden" name="contact_number">
