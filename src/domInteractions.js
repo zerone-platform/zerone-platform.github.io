@@ -16,10 +16,10 @@ export const changeScrollBtn = (black, white) => {
   let top1 = document.documentElement.scrollTop;
   let top2 = document.body.scrollTop;
   
-  if (top1 >= 7660 || top2 >= 7660) {
+  if (top1 >= 7640 || top2 >= 7640) {
       black.style.display = 'block';
       white.style.display = 'none';
-  } else if (top1 >= 7620 || top2 >= 7620) {
+  } else if (top1 >= 7560 || top2 >= 7560) {
       black.style.display = 'none';
       white.style.display = 'block';
   } else if (top1 >= 7090 || top2 >= 7090) {

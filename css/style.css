@@ -34,6 +34,15 @@ section {
   justify-content: center;
 }
 
+small {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: bold;
+}
+
 .container {
   width: 340px;
 }
@@ -184,6 +193,7 @@ section {
   background-color: white;
   margin: 30px 0;
   border-radius: 5px;
+  padding: 5px;
 }
 
 .service__title {
@@ -235,7 +245,7 @@ section {
 }
 
 .offer__box {
-  height: 607px;
+  height: fit-content;
   width: 100%;
   margin: 40px 0;
   padding: 30px 10px 30px 10px;
@@ -391,9 +401,13 @@ section {
 }
 
 .team {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--cetacean-blue);
   font-family: "Open Sans", sans-serif;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 
 .team h2 {
@@ -405,7 +419,7 @@ section {
 .team__list {
   display: flex;
   flex-direction: row;
-  width: 370px;
+  width: 360px;
   overflow: auto;
 }
 
@@ -534,6 +548,7 @@ footer {
 .contact-form .btn {
   width: 90%;
   border-radius: 12px;
+  margin-top: 20px;
 }
 
 .newsletter {
