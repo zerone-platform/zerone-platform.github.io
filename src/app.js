@@ -46,7 +46,7 @@ class ZerOne {
         let email = event.target.contact_email.value;
         let msg = event.target.message.value;
 
-        if (name.lenght != 2) {
+        if (name.length <= 2) {
             window.alert('Pole "Imię" musi posiadać conajmniej 3 znaki.')
             return false
         };
@@ -58,6 +58,7 @@ class ZerOne {
         };
 
         sendFormToAPI(templateParams);
+        window.alert('Twój formularz został wysłany poprawnie. Sprawdź skrzynkę e-mail.')
     };
 
     displayScrollBtn = event => {
