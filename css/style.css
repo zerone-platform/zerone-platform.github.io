@@ -54,7 +54,9 @@ section {
   background-color: var(--indigo);
 }
 
-.btn:active, .go-top:active, .navbar__buttons > img:active {
+.btn:active,
+.go-top:active,
+.navbar__buttons > img:active {
   transform: scale(0.9);
 }
 
@@ -64,15 +66,19 @@ section {
 }
 
 .connector--top {
-  background: linear-gradient(to bottom, 
-  rgba(253, 239, 249, 0.85), 
-  var(--anti-white, 0.85));
+  background: linear-gradient(
+    to bottom,
+    rgba(253, 239, 249, 0.85),
+    var(--anti-white, 0.85)
+  );
 }
 
 .connector--bot {
-  background: linear-gradient(to top, 
-  rgba(253, 239, 249, 0.85), 
-  var(--anti-white, 0.85));
+  background: linear-gradient(
+    to top,
+    rgba(253, 239, 249, 0.85),
+    var(--anti-white, 0.85)
+  );
 }
 
 .navbar {
@@ -120,9 +126,9 @@ section {
   display: flex;
   justify-content: center;
   background-color: rgba(128, 128, 128, 0.9);
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   transition-timing-function: ease-in;
-  transition-delay: .5s;
+  transition-delay: 0.5s;
 }
 
 .aside-nav__links {
@@ -144,18 +150,19 @@ section {
 }
 
 .about {
-  background: linear-gradient(to bottom,
-   rgba(3, 0, 31, 0.85), 
-   rgba(115, 3, 192, 0.85), 
-   rgba(236, 56, 188, 0.85), 
-   rgba(253, 239, 249, 0.85)
+  background: linear-gradient(
+    to bottom,
+    rgba(3, 0, 31, 0.85),
+    rgba(115, 3, 192, 0.85),
+    rgba(236, 56, 188, 0.85),
+    rgba(253, 239, 249, 0.85)
   );
   color: var(--lavender-blush);
   padding-bottom: 40px;
   position: relative;
   top: 0;
   z-index: -1;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .about h2 {
@@ -478,11 +485,12 @@ section {
 }
 
 footer {
-  background: linear-gradient(to top,
-   rgba(3, 0, 31, 0.85), 
-   rgba(115, 3, 192, 0.85), 
-   rgba(236, 56, 188, 0.85), 
-   rgba(253, 239, 249, 0.85)
+  background: linear-gradient(
+    to top,
+    rgba(3, 0, 31, 0.85),
+    rgba(115, 3, 192, 0.85),
+    rgba(236, 56, 188, 0.85),
+    rgba(253, 239, 249, 0.85)
   );
   display: flex;
   flex-direction: column;
