@@ -87,7 +87,7 @@ section {
 .go-top {
   position: fixed;
   width: fit-content;
-  right: 10px;
+  right: 5%;
 }
 
 .go-top img {
@@ -405,7 +405,7 @@ section {
 .team__list {
   display: flex;
   flex-direction: row;
-  width: 380px;
+  width: 370px;
   overflow: auto;
 }
 
