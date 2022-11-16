@@ -3,6 +3,7 @@ export const sendFormToAPI = (templateParams) => {
     .then((response) => {
       if (response.status >= 200 && response.status <= 300) {
         document.getElementById("formSendBtn").innerText = "Wysłano";
-      }
+      };
+      window.alert('Twój formularz został wysłany poprawnie. Sprawdź skrzynkę e-mail.')
     });
 };

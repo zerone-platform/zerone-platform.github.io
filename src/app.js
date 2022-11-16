@@ -1,4 +1,4 @@
-import { mapListToDOMElements, changeScrollBtn, slideAsideNav } from "./domInteractions.js";
+import { mapListToDOMElements, stopArrowAnimation, setFocusAndTitle, addAPIScript, displayScrollBtn, showAsideNav } from "./domInteractions.js";
 import { sendFormToAPI } from "./requests.js";
 
 class ZerOne {
@@ -10,6 +10,8 @@ class ZerOne {
     InitializeApp = () => {
         this.connectDOMElements();
         this.setupListeners();
+        setFocusAndTitle();
+        addAPIScript();
     };
 
     connectDOMElements = () => {
@@ -26,11 +28,13 @@ class ZerOne {
         Object.keys(this.offerButtons).forEach(offerName => {
             this.offerButtons[offerName].addEventListener('click', this.goToContactForm);
         });
-        window.addEventListener('scroll', this.displayScrollBtn);
-        this.listOfLinks.forEach(link => link.addEventListener('click', this.showAsideNav));
+        window.addEventListener('scroll', displayScrollBtn);
         this.viewElements.contactForm.addEventListener('submit', this.sendEmail);
-        this.viewElements.goTop.addEventListener('click', this.backTop);
-        this.viewElements.menuBtn.addEventListener('click', this.showAsideNav);
+        // Listeners with imported functions.
+        this.listOfLinks.forEach(link => link.addEventListener('click', showAsideNav));
+        this.viewElements.menuBtn.addEventListener('click', showAsideNav);
+        this.viewElements.menuBtn.addEventListener('keydown', showAsideNav);
+        this.viewElements.offerList.addEventListener('scroll', stopArrowAnimation);
     };
 
     goToContactForm = event => {
@@ -43,8 +47,6 @@ class ZerOne {
     sendEmail = event => {
         event.preventDefault();
         let name = event.target.fname.value;
-        let email = event.target.contact_email.value;
-        let msg = event.target.message.value;
 
         if (name.length <= 2) {
             window.alert('Pole "Imię" musi posiadać conajmniej 3 znaki.')
@@ -53,30 +55,11 @@ class ZerOne {
 
         let templateParams = {
             fname: name,
-            contact_email: email,
-            message: msg,
+            contact_email: event.target.contact_email.value,
+            message: event.target.message.value,
         };
 
         sendFormToAPI(templateParams);
-        window.alert('Twój formularz został wysłany poprawnie. Sprawdź skrzynkę e-mail.')
-    };
-
-    displayScrollBtn = event => {
-        const black = this.viewElements.goTop.children[0];
-        const white = this.viewElements.goTop.children[1];
-
-        changeScrollBtn(black, white);
-    };
-
-    backTop = event => {
-        this.viewElements.navigation.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    };
-
-    showAsideNav = event => {
-        const about = this.viewElements.about;
-        const aside = this.viewElements.asideNavigation;
-
-        slideAsideNav(about, aside);
     };
 };
 

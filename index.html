@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="author"
-      content="ZerOne - Marcin Chudzik"
-      <meta
-      name="description"
-      content="Indywidualne projekty stron, serwisów i sklepów Internetowych.
-	    Tworzenie oraz utrzymywanie serwisów Internetowych. Pomoc na zamówienie lub współpraca długoterminowa."
-    />
-    <meta
-      name="keywords"
-      content="strona internetowa, serwisy internetowe, hosting, hosting strony internetowej, sklepy internetowe
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="ZerOne - Marcin Chudzik"/>
+	<meta name="description" content="Indywidualne projekty stron, serwisów i sklepów Internetowych.
+		Tworzenie oraz utrzymywanie serwisów Internetowych. Pomoc na zamówienie lub współpraca długoterminowa." />
+	<meta name="keywords" content="strona internetowa, serwisy internetowe, hosting, hosting strony internetowej, sklepy internetowe
 	    usługi hostingowe, tworzenie stron Malbork, tworzenie stron Świecie, projekty serwisów internetowych, własna strona internetowa,
 	    własny sklep internetowy, platforma internetowa">
 	<link href="./css/style.css" rel="stylesheet">
@@ -24,20 +18,20 @@
 <body>
 	<nav id="navigation" class="navbar">
 		<span class="navbar__buttons">
-			<img id="menuBtn" src="./img/menu.png" alt="menu">
-			<h1>ZerOne</h1>
+			<img role="button" aria-pressed="true" tabindex="0" id="menuBtn" src="./img/menu.png" alt="menu">
+			<h1 tabindex="-1">ZerOne</h1>
 		</span>
-		<div id="goTop" class="go-top">
-			<img src="./img/move-up-black.png" alt="go top">
-			<img src="./img/move-up-white.png" alt="go top">
-		</div>
+		<button id="goTop" class="go-top">
+			<img src="./img/move-up.png" alt="go top" 
+			onclick="navigation.scrollIntoView({ behavior: 'smooth', block: 'start' })">
+		</button>
 	</nav>
 
 	<aside id="asideNavigation" class="aside-nav">
 		<div class="container">
 			<ul class="aside-nav__links">
 				<li>
-					<a href="#navigation">O firmie</a>
+					<a href="#navigation" class="selected">O firmie</a>
 				</li>
 
 				<li>
@@ -62,298 +56,303 @@
 			</ul>
 		</div>
 	</aside>
-
-	<section id="about" class="about">
-		<div class="container">
-			<h2>Bądź obecny i dołącz do sieci razem z nami</h2>
-			<p>
-				Obecnie wszystko znajduję się w Internecie. To tam najczęściej szukamy
-				odpowiedzi na nachodzące nas potrzeby. Dlatego chcemy byś był
-				obecny w sieci. Dziś posiadanie strony internetowej naszej firmy lub
-				marki osobistej wydaję się być koniecznością, aby na równi walczyć
-				o naszego nowego, potencjalnego klienta.
-				<br><br>
-				Z badań wynika, że w 2021 roku, <strong>43.6%</strong> użytkowników
-				Internetu odkryło nowe marki lub produkty poprzez wyszukiwarki internetowe.
-				<strong>Spraw by w tym roku również znaleźć się w tym zbiorzę.</strong>
-			</p>
-			<h3>Z naszej strony oferujemy:</h3>
-
-			<ul class="service-list">
-				<li>
-					<div class="service-list__box">
-						<span class="service__title">
-							<h5>Indywidualne projekty</h5>
-							<img src="./img/check.png" alt="check">
-						</span>
-						<p>
-							Zaprojektujemy twoją wizję lub wykonamy twój projekt, jeśli już go posiadasz.
-							Każdy produkt opracowywany jest <strong>Indywidualnie</strong> we
-							<strong>współpracy z klientem.</strong> Staramy się utrzymywać design naszych projektów
-							na obecnych trendach.
-						</p>
-					</div>
-				</li>
-
-				<li>
-					<div class="service-list__box">
-						<span class="service__title">
-							<h5>Wsparcie oraz realną współprace</h5>
-							<img src="./img/check.png" alt="check">
-						</span>
-						<p>
-							Masz <strong>realny</strong> wpływa na projekt przez cały proces jego budowy.
-							Z chęcią podejmiemy się wyzwań związanych z <strong>Twoimi pomysłami</strong>
-							jak i sami będziemy informować cię o wprowadzaniu zmian w projekcie.
-						</p>
-					</div>
-				</li>
-
-				<li>
-					<div class="service-list__box">
-						<span class="service__title">
-							<h5>Modyfikację się przydają</h5>
-							<img src="./img/check.png" alt="check">
-						</span>
-						<p>
-							Nasze projekty od początku budujemy tak, by były <strong>prostę w Modyfikacji.</strong>
-							Posiadamy dokumentację dla każdego z naszych projektów, by wprowadzanie zmian i nowych
-							funkcjonalności poszło szybko i sprawnie.
-							Rynek jest bardzo dynamiczny, a więc czasem przyda się odświeżyć wygląd swojej wizytówki.
-						</p>
-					</div>
-				</li>
-
-				<li>
-					<div class="service-list__box">
-						<span class="service__title">
-							<h5></h5>
-							<img src="./img/check.png" alt="check">
-						</span>
-						<p></p>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</section>
-
-	<div class="connector connector--top"></div>
-
-	<section id="pricing" class="pricing">
-		<div class="container">
-			<h2>Oferty stałej współpracy</h2>
-			<p>*cena za pakiet w abonamencie mesięcznym*</p>
-
-			<ul class="offer-list">
-				<li class="offer__box">
-					<div class="offer__icon offer__icon--bronze">
-						<img src="./img/bronze.png" alt="icon">
-					</div>
-					<h4>50 PLN</h4>
-					<span class="offer__separator"></span>
-					<ul class="offer__box__details">
-						<li><strong>1 godzina</strong> do wykorzystania na modyfikacje</li>
-						<li>Wsparcie technicze w kontakcie mailowym</li>
-					</ul>
-					<button type="submit" class="btn" data-offer-name="bronze">Wybierz</button>
-				</li>
-
-				<li class="offer__box">
-					<div class="offer__icon offer__icon--silver">
-						<img src="./img/silver.png" alt="icon">
-					</div>
-					<h4>170 PLN</h4>
-					<span class="offer__separator"></span>
-					<ul class="offer__box__details">
-						<li><strong>3 godziny</strong> do wykorzystania na modyfikacje</li>
-						<li>Wsparcie technicze w kontakcie mailowym</li>
-						<li>Zawartość</li>
-					</ul>
-					<button type="submit" class="btn" data-offer-name="silver">Wybierz</button>
-				</li>
-
-				<li class="offer__box">
-					<div class="offer__icon offer__icon--gold">
-						<img src="./img/gold.png" alt="icon">
-					</div>
-					<h4>350 PLN</h4>
-					<span class="offer__separator"></span>
-					<ul class="offer__box__details">
-						<li><strong>5 godzin</strong> do wykorzystania na modyfikacje</li>
-						<li>Wsparcie technicze w kontakcie mailowym</li>
-						<li>Awaryjna linia telefoniczna Pon-Pt</li>
-						<li>Zawartość</li>
-					</ul>
-					<button type="submit" class="btn" data-offer-name="gold">Wybierz</button>
-				</li>
-
-				<li class="offer__box">
-					<div class="offer__icon offer__icon--platinum">
-						<img src="./img/platinum.png" alt="icon">
-					</div>
-					<h4>800 PLN</h4>
-					<span class="offer__separator"></span>
-					<ul class="offer__box__details">
-						<li><strong>10 godzin</strong> do wykorzystania na modyfikacje</li>
-						<li>Wsparcie technicze w kontakcie mailowym</li>
-						<li>Zawartość</li>
-						<li>Awaryjna linia telefoniczna</li>
-						<hr>
-						<li>
-							<strong>*Kolejka priorytetowa*</strong>
-							<br>
-							<strong>Kontakt mailowy jak i linia telefoniczna dostępnę są 24/7</strong>
-						</li>
-					</ul>
-					<button type="submit" class="btn" data-offer-name="platinum">WYBIERZ</button>
-				</li>
-			</ul>
-		</div>
-	</section>
-
-	<section id="strategy" class="strategy">
-		<div class="container">
-			<h2>Jak będzie wyglądać nasza współpraca?</h2>
-
-			<ul class="strategy__list">
-				<li class="strategy__list__point">
-					<img src="./img/check.png" alt="icon">
-					<p class="strategy__point__desc">
-						Zawartość
-					</p>
-				</li>
-
-				<li class="strategy__list__point">
-					<img src="./img/check.png" alt="icon">
-					<p class="strategy__point__desc">
-						Zawartość
-					</p>
-				</li>
-
-				<li class="strategy__list__point">
-					<img src="./img/check.png" alt="icon">
-					<p class="strategy__point__desc">
-						Zawartość
-					</p>
-				</li>
-
-				<li class="strategy__list__point">
-					<img src="./img/check.png" alt="icon">
-					<p class="strategy__point__desc">
-						Zawartość
-					</p>
-				</li>
-			</ul>
-		</div>
-	</section>
-
-	<section class="ceo">
-		<div class="container">
-			<div class="mind">
-				<h2>
-					We belive that people can be truly happy on the
-					outside only after reaching happiness within.
-				</h2>
+	
+	<main>
+		<section id="about" class="about">
+			<div class="container">
+				<h2>Bądź obecny i dołącz do sieci razem z nami</h2>
 				<p>
-					Marcin Chudzik
+					Obecnie wszystko znajduję się w Internecie. To tam najczęściej szukamy
+					odpowiedzi na nachodzące nas potrzeby. Dlatego chcemy byś był
+					obecny w sieci. Dziś posiadanie strony internetowej naszej firmy lub
+					marki osobistej wydaję się być koniecznością, aby na równi walczyć
+					o naszego nowego, potencjalnego klienta.
 					<br><br>
-					<b>CEO & Co-Founder</b>
+					Z badań wynika, że w 2021 roku, <strong>43.6%</strong> użytkowników
+					Internetu odkryło nowe marki lub produkty poprzez wyszukiwarki internetowe.
+					<strong>Spraw by w tym roku również znaleźć się w tym zbiorzę.</strong>
 				</p>
+				<h3>Z naszej strony oferujemy:</h3>
+
+				<ul class="service-list">
+					<li tabindex="1">
+						<div class="service-list__box">
+							<span class="service__title">
+								<h4>Indywidualne projekty</h4>
+								<img src="./img/check.png" alt="check">
+							</span>
+							<p>
+								Zaprojektujemy twoją wizję lub wykonamy twój projekt, jeśli już go posiadasz.
+								Każdy produkt opracowywany jest <strong>Indywidualnie</strong> we
+								<strong>współpracy z klientem.</strong> Staramy się utrzymywać design naszych projektów
+								na obecnych trendach.
+							</p>
+						</div>
+					</li>
+
+					<li tabindex="2">
+						<div class="service-list__box">
+							<span class="service__title">
+								<h4>Wsparcie oraz realną współprace</h4>
+								<img src="./img/check.png" alt="check">
+							</span>
+							<p>
+								Masz <strong>realny</strong> wpływa na projekt przez cały proces jego budowy.
+								Z chęcią podejmiemy się wyzwań związanych z <strong>Twoimi pomysłami</strong>
+								jak i sami będziemy informować cię o wprowadzaniu zmian w projekcie.
+							</p>
+						</div>
+					</li>
+
+					<li tabindex="3">
+						<div class="service-list__box">
+							<span class="service__title">
+								<h4>Modyfikację się przydają</h4>
+								<img src="./img/check.png" alt="check">
+							</span>
+							<p>
+								Nasze projekty od początku budujemy tak, by były <strong>prostę w Modyfikacji.</strong>
+								Posiadamy dokumentację dla każdego z naszych projektów, by wprowadzanie zmian i nowych
+								funkcjonalności poszło szybko i sprawnie.
+								Rynek jest bardzo dynamiczny, a więc czasem przyda się odświeżyć wygląd swojej wizytówki.
+							</p>
+						</div>
+					</li>
+
+					<li tabindex="4">
+						<div class="service-list__box">
+							<span class="service__title">
+								<h4>Serwis</h4>
+								<img src="./img/check.png" alt="check">
+							</span>
+							<p>Zawartość</p>
+						</div>
+					</li>
+				</ul>
 			</div>
-			<img src="./img/marcin.JPG" alt="photo">
-		</div>
-	</section>
+		</section>
 
-	<section id="team" class="team">
-		<h2>Poznaj nasz zespół</h2>
-		<ul class="team__list">
-			<li class="team__member">
-				<div class="member__photo" style="background-image: url(./img/marcin.JPG);">
-				</div>
-				<h3>Marcin Chudzik</h3>
-				<b>CEO & Co-Founder</b>
-				<p>Coś o osobie.<br><br><br></p>
-				<span class="member__socials">
-					SOCIALS
-				</span>
-			</li>
-			<li class="team__member">
-				<div class="member__photo" style="background-image: url(./img/monika.jpg);"></div>
-				<h3>Monika Pauka</h3>
-				<b>Co-Founder</b>
-				<p>Coś o osobie.<br><br><br></p>
-				<span class="member__socials">
-					SOCIALS
-				</span>
-			</li>
-		</ul>
-	</section>
+		<div role="separator" class="connector connector--top"></div>
 
-	<section id="projects" class="projects">
-		<div class="container">
-			<h2>Projekty podglądowe</h2>
-			<div class="projects__gallery">
-				<div class="gallery__image" style="background-image: url(./img/check.png);"></div>
-				<div class="gallery__image" style="background-image: url(./img/check.png);"></div>
-				<div class="gallery__image" style="background-image: url(./img/check.png);"></div>
-				<div class="gallery__image" style="background-image: url(./img/check.png);"></div>
-				<div class="gallery__image" style="background-image: url(./img/check.png);"></div>
-				<div class="gallery__image" style="background-image: url(./img/check.png);"></div>
+		<section id="pricing" class="pricing">
+			<div class="container">
+				<h2>Oferty stałej współpracy</h2>
+				<small>*cena za pakiet w abonamencie mesięcznym*</small>
+				<img class="pricing__more" src="./img/arrow-offers.png" atl="more right">
+
+				<ul id="offerList" class="offer-list">
+					<li tabindex="5" class="offer__box">
+						<div role="presentation" class="offer__icon offer__icon--bronze">
+							<img src="./img/bronze.png" alt="icon">
+						</div>
+						<h5>50 PLN</h5>
+						<span class="offer-box__separator"></span>
+						<ul class="offer__box__details">
+							<li><strong>1 godzina</strong> do wykorzystania na modyfikacje</li>
+							<li>Wsparcie technicze w kontakcie mailowym</li>
+						</ul>
+						<button type="submit" class="btn" data-offer-name="bronze">Wybierz</button>
+					</li>
+
+					<li tabindex="6" class="offer__box">
+						<div role="presentation" class="offer__icon offer__icon--silver">
+							<img src="./img/silver.png" alt="icon">
+						</div>
+						<h5>170 PLN</h5>
+						<span class="offer-box__separator"></span>
+						<ul class="offer__box__details">
+							<li><strong>3 godziny</strong> do wykorzystania na modyfikacje</li>
+							<li>Wsparcie technicze w kontakcie mailowym</li>
+							<li>Zawartość</li>
+						</ul>
+						<button type="submit" class="btn" data-offer-name="silver">Wybierz</button>
+					</li>
+
+					<li tabindex="7" class="offer__box">
+						<div role="presentation" class="offer__icon offer__icon--gold">
+							<img src="./img/gold.png" alt="icon">
+						</div>
+						<h5>350 PLN</h5>
+						<span class="offer-box__separator"></span>
+						<ul class="offer__box__details">
+							<li><strong>5 godzin</strong> do wykorzystania na modyfikacje</li>
+							<li>Wsparcie technicze w kontakcie mailowym</li>
+							<li>Awaryjna linia telefoniczna Pon-Pt</li>
+							<li>Zawartość</li>
+						</ul>
+						<button type="submit" class="btn" data-offer-name="gold">Wybierz</button>
+					</li>
+
+					<li tabindex="8" class="offer__box">
+						<div role="presentation" class="offer__icon offer__icon--platinum">
+							<img src="./img/platinum.png" alt="icon">
+						</div>
+						<h5>800 PLN</h5>
+						<span class="offer-box__separator"></span>
+						<ul class="offer__box__details">
+							<li><strong>10 godzin</strong> do wykorzystania na modyfikacje</li>
+							<li>Wsparcie technicze w kontakcie mailowym</li>
+							<li>Zawartość</li>
+							<li>Awaryjna linia telefoniczna</li>
+							<li class="offer__box__details-last">
+								<strong>*Kolejka priorytetowa*</strong>
+								<br>
+								<strong>Kontakt mailowy jak i linia telefoniczna dostępnę są 24/7</strong>
+							</li>
+						</ul>
+						<button type="submit" class="btn" data-offer-name="platinum">WYBIERZ</button>
+					</li>
+				</ul>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<div class="connector connector--bot"></div>
+		<section id="strategy" class="strategy">
+			<div class="container">
+				<h2>Jak będzie wyglądać nasza współpraca?</h2>
 
-	<footer id="contact">
-		<div class="container">
-			<form class="contact-form" id="contactForm" method="post" action=".">
-				<h6>Napisz do nas</h6>
-
-				<label for="fname">Imię <small>(Minimum 3 znaki)</small></label>
-				<input id="fname" name="fname" type="text" required placeholder="Podaj swoje pełne Imię">
-
-				<label for="email">Email</label>
-				<input id="email" name="contact_email" type="email" required placeholder="Podaj swój adres Email">
-
-				<label for="message">Dodatkowe informacje <small>(Opcjonalnie)</small></label>
-				<textarea id="message" name="message"></textarea>
-				
-				<button class="btn" id="formSendBtn" type="submit">WYŚLIJ</button>
-			</form>
-
-			<div class="contact">
-				<h6>Zadzwoń</h6>
-				<a href="tel:+48731-666-029">+48 731-666-029</a>
-
-				<h6>Odwiedź nas</h6>
-				<address>Grudziądzka, 82-200, Malbork</address>
-
-				<h6>Specjalizujemy się w:</h6>
-				<ul>
-					<li>
-						<strong>Stronach Internetowych</strong>
+				<ul class="strategy__list">
+					<li tabindex="9" class="strategy__list__point">
+						<img src="./img/check.png" alt="icon">
+						<p class="strategy__point__desc">
+							Zawartość
+						</p>
 					</li>
-					<li>
-						<strong>Serwisach Internetowych</strong>
+
+					<li tabindex="10" class="strategy__list__point">
+						<img src="./img/check.png" alt="icon">
+						<p class="strategy__point__desc">
+							Zawartość
+						</p>
 					</li>
-					<li>
-						<strong>Sklepach Internetowych</strong>
+
+					<li tabindex="11" class="strategy__list__point">
+						<img src="./img/check.png" alt="icon">
+						<p class="strategy__point__desc">
+							Zawartość
+						</p>
 					</li>
-					<li class="contact__additional-info">
-						<p>
-							Podejmiemy się też pomocy w tworzeniu oprogramowania pod
-							konkretny użytek np. z wykorzystaniem baz danych.
-							Daj znać może będziemy w stanie ci pomóc.
+
+					<li tabindex="12" class="strategy__list__point">
+						<img src="./img/check.png" alt="icon">
+						<p class="strategy__point__desc">
+							Zawartość
 						</p>
 					</li>
 				</ul>
 			</div>
-		</div>
-	</footer>
+		</section>
+
+		<section class="ceo">
+			<div class="container">
+				<div tabindex="12" class="mind">
+					<h2>
+						We belive that people can be truly happy on the
+						outside only after reaching happiness within.
+					</h2>
+					<p>
+						Marcin Chudzik
+						<br><br>
+						<b>CEO & Co-Founder</b>
+					</p>
+				</div>
+				<img src="./img/marcin.JPG" alt="photo">
+			</div>
+		</section>
+
+		<section id="team" class="team">
+			<h2>Poznaj nasz zespół</h2>
+			<ul class="team__list">
+				<li tabindex="13" class="team__member">
+					<div role="img" class="member__photo" style="background-image: url(./img/marcin.JPG);"></div>
+					<h3>Marcin Chudzik</h3>
+					<b>CEO & Co-Founder</b>
+					<p>Coś o osobie.<br><br><br></p>
+					<span>
+						<ul>
+							<li>LinkedIn</li>
+						</ul>
+					</span>
+				</li>
+
+				<li tabindex="14" class="team__member">
+					<div role="img" class="member__photo" style="background-image: url(./img/monika.jpg);"></div>
+					<h3>Monika Pauka</h3>
+					<b>Co-Founder</b>
+					<p>Coś o osobie.<br><br><br></p>
+					<span>
+						<ul>
+							<li>LinkedIn</li>
+						</ul>
+					</span>
+				</li>
+			</ul>
+		</section>
+
+		<section id="projects" class="projects">
+			<div class="container">
+				<h2>Projekty podglądowe</h2>
+				<ul class="projects__gallery">
+					<li tabindex="15" class="gallery__image" style="background-image: url(./img/check.png);"></li>
+					<li tabindex="16" class="gallery__image" style="background-image: url(./img/check.png);"></li>
+					<li tabindex="17" class="gallery__image" style="background-image: url(./img/check.png);"></li>
+					<li tabindex="18" class="gallery__image" style="background-image: url(./img/check.png);"></li>
+					<li tabindex="19" class="gallery__image" style="background-image: url(./img/check.png);"></li>
+					<li tabindex="20" class="gallery__image" style="background-image: url(./img/check.png);"></li>
+				</ul>
+			</div>
+		</section>
+
+		<div role="separator" class="connector connector--bot"></div>
+
+		<footer id="contact">
+			<div class="container">
+				<form class="contact-form" id="contactForm" method="post" action=".">
+					<h6>Napisz do nas</h6>
+
+					<label for="fname" aria-labelledby="fname">Imię <small>(Minimum 3 znaki)</small></label>
+					<input tabindex="21" id="fname" name="fname" type="text" required placeholder="Podaj swoje pełne Imię">
+
+					<label for="email" aria-labelledby="email">Email</label>
+					<input tabindex="22" id="email" name="contact_email" type="email" required placeholder="Podaj swój adres Email">
+
+					<label for="message" aria-labelledby="message">Dodatkowe informacje <small>(Opcjonalnie)</small></label>
+					<textarea tabindex="23" id="message" name="message"></textarea>
+
+					<button tabindex="24" class="btn" id="formSendBtn" type="submit">WYŚLIJ</button>
+				</form>
+
+				<div role="listbox" class="contact">
+					<h6>Zadzwoń</h6>
+					<a tabindex="25" href="tel:+48731-666-029">+48 731-666-029</a>
+
+					<h6>Odwiedź nas</h6>
+					<address tabindex="26">Grudziądzka, 82-200, Malbork</address>
+
+					<h6>Specjalizujemy się w:</h6>
+					<ul>
+						<li>
+							<strong>Stronach Internetowych</strong>
+						</li>
+						<li>
+							<strong>Serwisach Internetowych</strong>
+						</li>
+						<li>
+							<strong>Sklepach Internetowych</strong>
+						</li>
+						<li class="contact__additional-info">
+							<p>
+								Podejmiemy się też pomocy w tworzeniu oprogramowania pod
+								konkretny użytek np. z wykorzystaniem baz danych.
+								Daj znać może będziemy w stanie ci pomóc.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</main>
 
 	<script type="module" src="./src/app.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 
 </html>
