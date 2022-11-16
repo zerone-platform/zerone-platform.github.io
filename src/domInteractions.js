@@ -12,47 +12,60 @@ export const mapListToDOMElements = (listOfValues, attribute) => {
   return _viewElements;
 };
 
-export const changeScrollBtn = (black, white) => {
-  let top1 = document.documentElement.scrollTop;
-  let top2 = document.body.scrollTop;
-  
-  if (top1 >= 7640 || top2 >= 7640) {
-      black.style.display = 'block';
-      white.style.display = 'none';
-  } else if (top1 >= 7560 || top2 >= 7560) {
-      black.style.display = 'none';
-      white.style.display = 'block';
-  } else if (top1 >= 7090 || top2 >= 7090) {
-    black.style.display = "block";
-    white.style.display = "none";
-  } else if (top1 >= 6900 || top2 >= 6900) {
-    black.style.display = "none";
-    white.style.display = "block";
-  } else if (top1 >= 5900 || top2 >= 5900) {
-    black.style.display = "block";
-    white.style.display = "none";
-  } else if (top1 >= 4400 || top2 >= 4400) {
-    black.style.display = "none";
-    white.style.display = "block";
-  } else if (top1 >= 100 || top2 >= 100) {
-    black.style.display = "block";
-    white.style.display = "none";
+export const stopArrowAnimation = event => {
+  const arrow = document.querySelector('.pricing__more');
+  if (event.target.scrollLeft >= 1100) {
+    arrow.style.animationPlayState = 'paused';
   } else {
-    black.style.display = "none";
-    white.style.display = "none";
-  }
+    arrow.style.animationPlayState = 'running';
+  };
 };
 
-export const slideAsideNav = (about, aside) => {
-  if (about.style.top !== "200px") {
-    about.style.top = "200px";
-    about.style.transitionDelay = "0s";
-    aside.style.left = "0";
-    aside.style.transitionDelay = ".5s";
+export const setFocusAndTitle = () => {
+  let heading = document.querySelector('h1');
+  heading.focus();
+  document.title = heading.innerText;
+};
+
+export const addAPIScript = () => {
+  const scriptAPI = document.createElement('script');
+  scriptAPI.type = 'text/javascript';
+  scriptAPI.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+  document.body.appendChild(scriptAPI);
+};
+
+export const displayScrollBtn = event => {
+  const scrollBtn = document.querySelector('#goTop');
+  let top1 = document.documentElement.scrollTop;
+  let top2 = document.body.scrollTop;
+
+  if (top1 >= 100 || top2 >= 100) {
+      scrollBtn.style.display = 'block';
   } else {
-    aside.style.left = "-100%";
-    aside.style.transitionDelay = "0s";
-    about.style.top = "0";
-    about.style.transitionDelay = ".5s";
-  }
+      scrollBtn.style.display = 'none';
+  };
+};
+
+export const showAsideNav = event => {
+  if (event.type === 'click' || event.key === 'Enter') {
+      const about = document.querySelector('#about');
+      const aside = document.querySelector('#asideNavigation');
+
+      if (about.style.top !== "200px") {
+        about.style.top = "200px";
+        about.style.transitionDelay = "0s";
+        aside.style.left = "0";
+        aside.style.transitionDelay = ".3s";
+      } else {
+        aside.style.left = "-100%";
+        aside.style.transitionDelay = "0s";
+        about.style.top = "0";
+        about.style.transitionDelay = ".3s";
+      };
+
+      if (event.target.localName === 'a') {
+          document.querySelector('.aside-nav__links .selected').classList.remove('selected');
+          event.target.classList.add('selected');
+      };
+  };
 };

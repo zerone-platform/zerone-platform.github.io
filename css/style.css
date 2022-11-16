@@ -2,7 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
-@import url(./variables.css);
+
+/* Colors used in project */
+:root {
+  --lavender-blush: #fdeff9;
+  --indigo: #4b0281;
+  --byzantine: #ba29a0;
+  --cetacean-blue: #10002d;
+  --anti-white: #f2f2f2;
+  --platinum: #d1e2e8;
+  --gold: #fcc923;
+  --silver: #cfcfcf;
+  --bronze: #977547;
+}
 
 * {
   -moz-box-sizing: border-box;
@@ -21,6 +33,7 @@ body {
 h1 {
   font-size: 34px;
   font-weight: 600;
+  outline: none;
 }
 
 h2 {
@@ -100,15 +113,19 @@ strong {
 }
 
 .go-top {
-  position: fixed;
   width: fit-content;
-  right: 5%;
+  padding: 0;
+  display: none;
+  position: fixed;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
 }
 
 .go-top img {
-  width: 35px;
-  display: none;
-  cursor: pointer;
+  width: 40px;
 }
 
 .navbar__buttons {
@@ -119,8 +136,8 @@ strong {
 }
 
 .navbar__buttons > img {
-  width: 24px;
   height: 32px;
+  cursor: pointer;
 }
 
 .navbar__buttons > a {
@@ -135,9 +152,9 @@ strong {
   display: flex;
   justify-content: center;
   background-color: rgba(128, 128, 128, 0.9);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in;
-  transition-delay: 0.5s;
+  transition-delay: 0.3s;
 }
 
 .aside-nav__links {
@@ -158,6 +175,12 @@ strong {
   border-bottom: 1px solid var(--lavender-blush);
 }
 
+.selected {
+  font-size: 20px !important;
+  font-weight: 500;
+  border-bottom: 1px solid var(--lavender-blush);
+}
+
 .about {
   background: linear-gradient(
     to bottom,
@@ -171,7 +194,7 @@ strong {
   position: relative;
   top: 0;
   z-index: -1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .about h2 {
@@ -190,17 +213,19 @@ strong {
 }
 
 .service-list {
-  display: flex;
-  flex-direction: column;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 23% 21% 21% 23%;
+  grid-row-gap: 2%;
 }
 
 .service-list__box {
   min-height: 165px;
   width: 100%;
   background-color: white;
-  margin: 30px 0;
   border-radius: 5px;
-  padding: 5px;
+  padding: 3px;
 }
 
 .service__title {
@@ -211,7 +236,7 @@ strong {
   font-family: "Lato", sans-serif;
 }
 
-.service__title h5 {
+.service__title h4 {
   font-size: 24px;
   font-weight: 700;
   color: black;
@@ -234,9 +259,7 @@ strong {
   font-family: "Lato", sans-serif;
 }
 
-.pricing p {
-  font-size: 14px;
-  font-weight: 300;
+.pricing small {
   color: dimgray;
   margin-top: 10px;
 }
@@ -244,17 +267,35 @@ strong {
 .pricing .container {
   text-align: center;
   margin-top: 60px;
-}
-
-.offer-list {
   display: flex;
   flex-direction: column;
 }
 
+.pricing__more {
+  width: 40px;
+  align-self: flex-end;
+  padding-top: 15px;
+  animation: arrow-pop-right 1.5s linear infinite;
+}
+
+@keyframes arrow-pop-right {
+  0% { transform: translate(0); }
+  50% { transform: translateX(30px); }
+  100% { transform: translate(0); }
+}
+
+.offer-list {
+  overflow-x: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 100%;
+  column-gap: 30px;
+  margin: 50px 0;
+}
+
 .offer__box {
   height: fit-content;
-  width: 100%;
-  margin: 40px 0;
+  width: 340px;
   padding: 30px 10px 30px 10px;
   border-radius: 30px;
   background-color: white;
@@ -262,11 +303,11 @@ strong {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 5px 5px 20px -3px gray;
   font-family: "Montserrat", sans-serif;
+  border: 1px dashed black;
 }
 
-.offer__box > h4 {
+.offer__box > h5 {
   line-height: 120%;
   font-size: 60px;
   font-weight: 700;
@@ -280,7 +321,7 @@ strong {
   margin-bottom: 30px;
 }
 
-.offer__separator {
+.offer-box__separator {
   height: 1px;
   width: 100%;
   border: 1px solid #c0c0c0;
@@ -293,6 +334,10 @@ strong {
   font-weight: 300;
   line-height: 200%;
   font-family: "Open Sans", sans-serif;
+}
+
+.offer__box__details-last {
+  border-top: 1px solid gray;
 }
 
 .offer__icon {
