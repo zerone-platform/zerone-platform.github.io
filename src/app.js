@@ -2,7 +2,7 @@ import { mapListToDOMElements, changeScrollBtn, slideAsideNav } from "./domInter
 import { sendFormToAPI } from "./requests.js";
 
 class ZerOne {
-    constructor () {
+    constructor() {
         this.viewElements = {};
         this.InitializeApp();
     };
@@ -36,7 +36,7 @@ class ZerOne {
     goToContactForm = event => {
         let contactForm = this.viewElements.contactForm
         let msg = `Dzień dobry.\n\nKontaktuje się w sprawie współpracy długoterminowej w pakiecie "${event.target.dataset.offerName.toUpperCase()}".\nProszę o więcej informacji w odpowiedzi na maila podanego w formularzu.`;
-        contactForm.scrollIntoView({behavior: 'smooth', block: 'center'});
+        contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
         contactForm.message.value = msg;
     };
 
@@ -69,7 +69,7 @@ class ZerOne {
     };
 
     backTop = event => {
-        this.viewElements.navigation.scrollIntoView({behavior: 'smooth', block: 'start'});
+        this.viewElements.navigation.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
     showAsideNav = event => {
