@@ -42,16 +42,23 @@ class ZerOne {
 
     sendEmail = event => {
         event.preventDefault();
-        if (this.viewElements.newsletter.checked) {
-            // NEWSLETTER
+        let name = event.target.fname.value;
+        let email = event.target.contact_email.value;
+        let msg = event.target.message.value;
+
+        if (name.length <= 2) {
+            window.alert('Pole "Imię" musi posiadać conajmniej 3 znaki.')
+            return false
         };
+
         let templateParams = {
-            fname: event.target.fname.value,
-            contact_email: event.target.contact_email.value,
-            message: event.target.message.value,
+            fname: name,
+            contact_email: email,
+            message: msg,
         };
 
         sendFormToAPI(templateParams);
+        window.alert('Twój formularz został wysłany poprawnie. Sprawdź skrzynkę e-mail.')
     };
 
     displayScrollBtn = event => {
