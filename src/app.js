@@ -1,4 +1,4 @@
-import { mapListToDOMElements, stopArrowAnimation, setFocusAndTitle, addAPIScript, displayScrollBtn, showAsideNav } from "./domInteractions.js";
+import { mapListToDOMElements, stopArrowAnimation, setFocusAndTitle, addAPIScript, displayScrollBtn, showAsideNav, backToTop, scrollToTheEnd } from "./domInteractions.js";
 import { sendFormToAPI } from "./requests.js";
 
 class ZerOne {
@@ -35,6 +35,8 @@ class ZerOne {
         this.viewElements.menuBtn.addEventListener('click', showAsideNav);
         this.viewElements.menuBtn.addEventListener('keydown', showAsideNav);
         this.viewElements.offerList.addEventListener('scroll', stopArrowAnimation);
+        this.viewElements.goTop.addEventListener('click', backToTop);
+        this.viewElements.pricingMore.addEventListener('click', scrollToTheEnd);
     };
 
     goToContactForm = event => {
