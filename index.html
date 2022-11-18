@@ -23,8 +23,7 @@
 			<h1>ZerOne</h1>
 		</span>
 		<button id="goTop" class="go-top">
-			<img src="./img/move-up.png" alt="go top" 
-			onclick="navigation.scrollIntoView({ behavior: 'smooth', block: 'start' })">
+			<img src="./img/move-up.png" alt="go top">
 		</button>
 	</nav>
 
@@ -139,7 +138,7 @@
 			<div class="container">
 				<h2>Oferty stałej współpracy</h2>
 				<small>*cena za pakiet w abonamencie mesięcznym*</small>
-				<img class="pricing__more" src="./img/arrow-offers.png" atl="go to the end">
+				<img role="button" aria-pressed="false" id="pricingMore" class="pricing__more" src="./img/arrow-offers.png" atl="go to the end">
 
 				<ul id="offerList" class="offer-list">
 					<li tabindex="-5" class="offer__box">
@@ -184,7 +183,7 @@
 						<button type="submit" class="btn" data-offer-name="gold">Wybierz</button>
 					</li>
 
-					<li tabindex="-8" class="offer__box">
+					<li tabindex="-8" class="offer__box" id="lastOffer">
 						<div role="presentation" class="offer__icon offer__icon--platinum">
 							<img src="./img/platinum.png" alt="icon">
 						</div>

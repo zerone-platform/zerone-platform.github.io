@@ -69,3 +69,11 @@ export const showAsideNav = event => {
       };
   };
 };
+
+export const backToTop = event => {
+  document.getElementById('navigation').scrollIntoView({behavior: 'smooth', block: 'start'});
+};
+ 
+export const scrollToTheEnd = event => {
+  document.getElementById('lastOffer').scrollIntoView({behavior: 'smooth', block: 'start'});
+};

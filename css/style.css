@@ -218,7 +218,7 @@ strong, b {
   margin-top: 30px;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 23% 21% 21% 23%;
+  grid-template-rows: auto auto auto auto;
   grid-row-gap: 2%;
 }
 
@@ -307,7 +307,7 @@ strong, b {
   align-items: center;
   justify-content: space-between;
   font-family: "Montserrat", sans-serif;
-  border: 1px dashed black;
+  border: 1px solid var(--indigo);
 }
 
 .offer__box > h5 {
