@@ -258,6 +258,11 @@ strong, b {
 }
 
 .pricing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 60px;
   background-color: var(--anti-white, 0.85);
   font-family: "Lato", sans-serif;
 }
@@ -267,17 +272,11 @@ strong, b {
   margin-top: 10px;
 }
 
-.pricing .container {
-  text-align: center;
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-}
-
 .pricing__more {
   width: 40px;
   align-self: flex-end;
   padding-top: 15px;
+  margin-right: 40px;
   animation: arrow-pop-right 1.5s linear infinite;
 }
 
@@ -288,12 +287,13 @@ strong, b {
 }
 
 .offer-list {
-  overflow-x: auto;
+  overflow-x: scroll;
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: 100%;
   column-gap: 30px;
   margin: 50px 0;
+  padding: 0 37px 0 37px;
 }
 
 .offer__box {
