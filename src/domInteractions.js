@@ -75,5 +75,5 @@ export const backToTop = event => {
 };
  
 export const scrollToTheEnd = event => {
-  document.getElementById('lastOffer').scrollIntoView({behavior: 'smooth', block: 'start'});
+  document.getElementById('lastOffer').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
 };
