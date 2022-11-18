@@ -83,9 +83,8 @@
 							</span>
 							<p>
 								Zaprojektujemy twoją wizję lub wykonamy twój projekt, jeśli już go posiadasz.
-								Każdy produkt opracowywany jest <strong>Indywidualnie</strong> we
-								<strong>współpracy z klientem.</strong> Staramy się utrzymywać design naszych projektów
-								na obecnych trendach.
+								Każdy produkt opracowywany jest indywidualnie we współpracy z klientem.
+								Staramy się utrzymywać design naszych projektów na obecnych trendach.
 							</p>
 						</div>
 					</li>
@@ -97,8 +96,8 @@
 								<img src="./img/check.webp" alt="check">
 							</span>
 							<p>
-								Masz <strong>realny</strong> wpływa na projekt przez cały proces jego budowy.
-								Z chęcią podejmiemy się wyzwań związanych z <strong>Twoimi pomysłami</strong>
+								Masz realny wpływa na projekt przez cały proces jego budowy.
+								Z chęcią podejmiemy się wyzwań związanych z Twoimi pomysłami
 								jak i sami będziemy informować cię o wprowadzaniu zmian w projekcie.
 							</p>
 						</div>
@@ -111,7 +110,7 @@
 								<img src="./img/check.webp" alt="check">
 							</span>
 							<p>
-								Nasze projekty od początku budujemy tak, by były <strong>prostę w Modyfikacji.</strong>
+								Nasze projekty od początku budujemy tak, by były prostę w modyfikacji.
 								Posiadamy dokumentację dla każdego z naszych projektów, by wprowadzanie zmian i nowych
 								funkcjonalności poszło szybko i sprawnie.
 								Rynek jest bardzo dynamiczny, a więc czasem przyda się odświeżyć wygląd swojej wizytówki.
@@ -140,12 +139,12 @@
 			<img role="button" aria-pressed="false" id="pricingMore" class="pricing__more" src="./img/arrow-offers.webp"
 				alt="go to the end">
 		
-			<ul id="offerList" class="offer-list">
-				<li tabindex="-5" class="offer__box">
+			<ul tabindex="-5" id="offerList" class="offer-list">
+				<li tabindex="-6" class="offer__box">
 					<div role="presentation" class="offer__icon offer__icon--bronze">
 						<img src="./img/bronze.webp" alt="icon">
 					</div>
-					<h5>50 PLN</h5>
+					<h3>50 PLN</h5>
 					<span class="offer-box__separator"></span>
 					<ul class="offer__box__details">
 						<li><strong>1 godzina</strong> do wykorzystania na modyfikacje</li>
@@ -154,11 +153,11 @@
 					<button type="submit" class="btn" data-offer-name="bronze">Wybierz</button>
 				</li>
 		
-				<li tabindex="-6" class="offer__box">
+				<li tabindex="-7" class="offer__box">
 					<div role="presentation" class="offer__icon offer__icon--silver">
 						<img src="./img/silver.webp" alt="icon">
 					</div>
-					<h5>170 PLN</h5>
+					<h3>170 PLN</h5>
 					<span class="offer-box__separator"></span>
 					<ul class="offer__box__details">
 						<li><strong>3 godziny</strong> do wykorzystania na modyfikacje</li>
@@ -168,11 +167,11 @@
 					<button type="submit" class="btn" data-offer-name="silver">Wybierz</button>
 				</li>
 		
-				<li tabindex="-7" class="offer__box">
+				<li tabindex="-8" class="offer__box">
 					<div role="presentation" class="offer__icon offer__icon--gold">
 						<img src="./img/gold.webp" alt="icon">
 					</div>
-					<h5>350 PLN</h5>
+					<h3>350 PLN</h5>
 					<span class="offer-box__separator"></span>
 					<ul class="offer__box__details">
 						<li><strong>5 godzin</strong> do wykorzystania na modyfikacje</li>
@@ -183,11 +182,11 @@
 					<button type="submit" class="btn" data-offer-name="gold">Wybierz</button>
 				</li>
 		
-				<li tabindex="-8" class="offer__box" id="lastOffer">
+				<li tabindex="-9" class="offer__box" id="lastOffer">
 					<div role="presentation" class="offer__icon offer__icon--platinum">
 						<img src="./img/platinum.webp" alt="icon">
 					</div>
-					<h5>800 PLN</h5>
+					<h3>800 PLN</h5>
 					<span class="offer-box__separator"></span>
 					<ul class="offer__box__details">
 						<li><strong>10 godzin</strong> do wykorzystania na modyfikacje</li>
@@ -210,13 +209,6 @@
 				<h2>Jak będzie wyglądać nasza współpraca?</h2>
 
 				<ul class="strategy__list">
-					<li tabindex="-9" class="strategy__list__point">
-						<img src="./img/check.webp" alt="icon">
-						<p class="strategy__point__desc">
-							Zawartość
-						</p>
-					</li>
-
 					<li tabindex="-10" class="strategy__list__point">
 						<img src="./img/check.webp" alt="icon">
 						<p class="strategy__point__desc">
@@ -237,13 +229,20 @@
 							Zawartość
 						</p>
 					</li>
+
+					<li tabindex="-13" class="strategy__list__point">
+						<img src="./img/check.webp" alt="icon">
+						<p class="strategy__point__desc">
+							Zawartość
+						</p>
+					</li>
 				</ul>
 			</div>
 		</section>
 
 		<section class="ceo">
 			<div class="container">
-				<div tabindex="-13" class="mind">
+				<div tabindex="-14" class="mind">
 					<h2>
 						We belive that people can be truly happy on the
 						outside only after reaching happiness within.
@@ -261,8 +260,10 @@
 		<section id="team" class="team">
 			<h2>Poznaj nasz zespół</h2>
 			<ul class="team__list">
-				<li tabindex="-14" class="team__member">
-					<div role="img" class="member__photo" style="background-image: url(./img/marcin.webp);"></div>
+				<li tabindex="-15" class="team__member">
+					<div id="memberPhoto1" style="display: none;">photo</div>
+					<div role="img" aria-labelledby="memberPhoto1" class="member__photo" style="background-image: url(./img/marcin.webp);">
+					</div>
 					<h3>Marcin Chudzik</h3>
 					<b>CEO & Co-Founder</b>
 					<p>Coś o osobie.<br><br><br></p>
@@ -273,8 +274,10 @@
 					</span>
 				</li>
 
-				<li tabindex="-15" class="team__member">
-					<div role="img" class="member__photo" style="background-image: url(./img/monika.webp);"></div>
+				<li tabindex="-16" class="team__member">
+					<div id="memberPhoto2" style="display: none;">photo</div>
+					<div role="img" aria-labelledby="memberPhoto2" class="member__photo" style="background-image: url(./img/monika.webp);">
+					</div>
 					<h3>Monika Pauka</h3>
 					<b>Co-Founder</b>
 					<p>Coś o osobie.<br><br><br></p>
@@ -291,12 +294,12 @@
 			<div class="container">
 				<h2>Projekty podglądowe</h2>
 				<ul class="projects__gallery">
-					<li tabindex="-16" class="gallery__image" style="background-image: url(./img/check.webp);"></li>
 					<li tabindex="-17" class="gallery__image" style="background-image: url(./img/check.webp);"></li>
 					<li tabindex="-18" class="gallery__image" style="background-image: url(./img/check.webp);"></li>
 					<li tabindex="-19" class="gallery__image" style="background-image: url(./img/check.webp);"></li>
 					<li tabindex="-20" class="gallery__image" style="background-image: url(./img/check.webp);"></li>
 					<li tabindex="-21" class="gallery__image" style="background-image: url(./img/check.webp);"></li>
+					<li tabindex="-22" class="gallery__image" style="background-image: url(./img/check.webp);"></li>
 				</ul>
 			</div>
 		</section>
@@ -306,28 +309,28 @@
 		<footer id="contact">
 			<div class="container">
 				<form class="contact-form" id="contactForm" method="post" action=".">
-					<h5>Napisz do nas</h5>
+					<h3>Napisz do nas</h3>
 
 					<label for="fname" aria-labelledby="fname">Imię <small>(Minimum 3 znaki)</small></label>
-					<input tabindex="-22" id="fname" name="fname" type="text" required placeholder="Podaj swoje pełne Imię">
+					<input tabindex="-23" id="fname" name="fname" type="text" required placeholder="Podaj swoje pełne Imię">
 
 					<label for="email" aria-labelledby="email">Email</label>
-					<input tabindex="-23" id="email" name="contact_email" type="email" required placeholder="Podaj swój adres Email">
+					<input tabindex="-24" id="email" name="contact_email" type="email" required placeholder="Podaj swój adres Email">
 
 					<label for="message" aria-labelledby="message">Dodatkowe informacje <small>(Opcjonalnie)</small></label>
-					<textarea tabindex="-24" id="message" name="message"></textarea>
+					<textarea tabindex="-25" id="message" name="message"></textarea>
 
-					<button tabindex="-25" class="btn" id="formSendBtn" type="submit">WYŚLIJ</button>
+					<button tabindex="-26" class="btn" id="formSendBtn" type="submit">WYŚLIJ</button>
 				</form>
 
 				<div class="contact">
-					<h6>Zadzwoń</h6>
-					<a tabindex="-26" href="tel:+48731-666-029">+48 731-666-029</a>
+					<h4>Zadzwoń</h4>
+					<a tabindex="-27" href="tel:+48731-666-029">+48 731-666-029</a>
 
-					<h6>Odwiedź nas</h6>
-					<address tabindex="-27">Grudziądzka, 82-200, Malbork</address>
+					<h4>Odwiedź nas</h4>
+					<address tabindex="-28">Grudziądzka, 82-200, Malbork</address>
 
-					<h6>Specjalizujemy się w:</h6>
+					<h4>Specjalizujemy się w:</h4>
 					<ul>
 						<li>
 							<strong>Stronach Internetowych</strong>
