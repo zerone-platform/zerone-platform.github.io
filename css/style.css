@@ -274,6 +274,7 @@ strong, b {
 
 .pricing__more {
   width: 40px;
+  height: 55px;
   align-self: flex-end;
   padding-top: 15px;
   margin-right: 40px;
