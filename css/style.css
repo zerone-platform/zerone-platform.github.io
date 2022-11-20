@@ -699,4 +699,8 @@ footer {
   .container {
     width: 1140px;
   }
+
+  .pricing__more {
+    display: none;
+  };
 }
