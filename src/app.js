@@ -1,4 +1,5 @@
-import { mapListToDOMElements, stopArrowAnimation, setFocusAndTitle, addAPIScript, displayScrollBtn, showAsideNav, backToTop, scrollToTheEnd } from "./domInteractions.js";
+import { mapListToDOMElements, stopArrowAnimation, setFocusAndTitle, addAPIScript,
+        displayScrollBtn, showAsideNav, backToTop, scrollToTheEnd } from "./domInteractions.js";
 import { sendFormToAPI } from "./requests.js";
 
 class ZerOne {

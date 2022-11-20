@@ -288,13 +288,13 @@ strong, b {
 }
 
 .offer-list {
-  overflow-x: auto;
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: 100%;
   column-gap: 30px;
   margin: 50px 0;
   padding: 0 5% 0 5%;
+  overflow-x: auto;
 }
 
 .offer__box {
@@ -445,8 +445,8 @@ strong, b {
 }
 
 .mind {
-  height: 484px;
   width: 100%;
+  height: fit-content;
   margin-top: 63px;
   padding: 10px;
   text-align: left;
@@ -459,7 +459,7 @@ strong, b {
   font-size: 36px;
   font-weight: 700;
   font-family: "Lato", sans-serif;
-  margin: 75px 0 21px 0;
+  margin: 35px 0 21px 0;
 }
 
 .mind p {
@@ -489,14 +489,16 @@ strong, b {
 }
 
 .team__list {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  width: 360px;
-  overflow: auto;
+  padding: 0 5% 0 5%;
+  overflow-x: auto;
 }
 
 .team__member {
   height: 526px;
+  width: 260px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -529,8 +531,8 @@ strong, b {
 }
 
 .member__photo {
-  height: 240px;
-  width: 240px;
+  min-height: 240px;
+  min-width: 240px;
   border-radius: 50%;
   background-size: cover;
   background-position: center center;
