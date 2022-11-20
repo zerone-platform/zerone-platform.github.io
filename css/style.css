@@ -288,7 +288,7 @@ strong, b {
 }
 
 .offer-list {
-  overflow-x: scroll;
+  overflow-x: auto;
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: 100%;
