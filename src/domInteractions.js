@@ -14,7 +14,7 @@ export const mapListToDOMElements = (listOfValues, attribute) => {
 
 export const stopArrowAnimation = event => {
   const arrow = document.querySelector('.pricing__more');
-  if (event.target.scrollLeft >= 1100) {
+  if (event.target.scrollLeft >= event.target.scrollLeftMax - 10) {
     arrow.style.animationPlayState = 'paused';
   } else {
     arrow.style.animationPlayState = 'running';
