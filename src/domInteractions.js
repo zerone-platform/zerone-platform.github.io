@@ -12,15 +12,6 @@ export const mapListToDOMElements = (listOfValues, attribute) => {
   return _viewElements;
 };
 
-export const stopArrowAnimation = event => {
-  const arrow = document.querySelector('.pricing__more');
-  if (event.target.scrollLeft >= 1070) {
-    arrow.style.animationPlayState = 'paused';
-  } else {
-    arrow.style.animationPlayState = 'running';
-  };
-};
-
 export const setFocusAndTitle = () => {
   let heading = document.querySelector('h1');
   heading.focus();
