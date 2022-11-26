@@ -1,4 +1,4 @@
-import { mapListToDOMElements, setFocusAndTitle, addAPIScript,
+import { mapListToDOMElements, setFocusAndTitle, addAPIScript, changeProjectImage,
         displayScrollBtn, showAsideNav, backToTop, scrollToTheEnd } from "./domInteractions.js";
 import { sendFormToAPI } from "./requests.js";
 
@@ -22,7 +22,6 @@ class ZerOne {
 
         this.viewElements = mapListToDOMElements(listOfIds, 'id');
         this.offerButtons = mapListToDOMElements(listOfButtons, 'data-offer-name');
-        this.listOfLinks = Array.from(document.querySelectorAll("aside a"));
     };
 
     setupListeners = () => {
@@ -32,7 +31,11 @@ class ZerOne {
         window.addEventListener('scroll', displayScrollBtn);
         this.viewElements.contactForm.addEventListener('submit', this.sendEmail);
         // Listeners with imported functions.
-        this.listOfLinks.forEach(link => link.addEventListener('click', showAsideNav));
+        Array.from(document.querySelectorAll("aside a")).forEach(link => link.addEventListener('click', showAsideNav));
+        Array.from(document.querySelectorAll('[data-alt-image]')).forEach(img => {
+            img.addEventListener('mouseover', changeProjectImage);
+            img.addEventListener('mouseout', changeProjectImage);
+        });
         this.viewElements.menuBtn.addEventListener('click', showAsideNav);
         this.viewElements.menuBtn.addEventListener('keydown', showAsideNav);
         this.viewElements.goTop.addEventListener('click', backToTop);

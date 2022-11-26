@@ -68,3 +68,13 @@ export const backToTop = event => {
 export const scrollToTheEnd = event => {
   document.getElementById('lastOffer').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
 };
+
+export const changeProjectImage = event => {
+  let dt = event.target.dataset
+
+  if (event.target.src.includes(dt.primaryImage)) {
+    event.target.src = dt.altImage;
+  } else{
+    event.target.src = dt.primaryImage;
+  };
+};
