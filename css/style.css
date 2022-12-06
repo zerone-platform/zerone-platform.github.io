@@ -48,7 +48,7 @@ section {
 }
 
 small {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -212,6 +212,7 @@ strong, b {
   color: rgb(196, 196, 196);
   font-size: 16px;
   margin: 20px 0;
+  line-height: 130%;
 }
 
 .service-list {
@@ -655,6 +656,10 @@ footer {
   color: var(--lavender-blush);
 }
 
+.contact-form {
+  border-radius: 15px;
+}
+
 .contact h4 {
   font-size: 20px;
   font-weight: 700;
@@ -677,6 +682,20 @@ footer {
 .contact__additional-info > p {
   margin-top: 10px;
   line-height: 100%;
+}
+
+.copyright {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 180%;
+  margin: 30px 0;
+  color: var(--lavender-blush);
+}
+
+.copyright sup {
+  font-size: 8px;
+  position: relative;
+  bottom: 5px;
 }
 
 /* Landscape phones */
@@ -723,6 +742,10 @@ footer {
 
   .about__info > p {
     width: 67%;
+  }
+
+  .service-list__box > p {
+    width: 90%;
   }
 
   .strategy__list__point {
@@ -807,7 +830,7 @@ footer {
   }
 
   .service-list__box {
-    min-height: 200px;
+    min-height: 240px;
   }
 
   .strategy__list__point {
@@ -843,6 +866,10 @@ footer {
     width: 42%;
   }
 
+  .service-list__box > p {
+    width: 80%;
+  }
+
   .service-list {
     grid-template-columns: 50% 50%;
     justify-content: unset;
@@ -874,7 +901,7 @@ footer {
 
   .strategy__list__second__item {
     align-items: flex-start;
-    margin-top: 105px;
+    margin-top: 115px;
   }
 
   .ceo .container {
