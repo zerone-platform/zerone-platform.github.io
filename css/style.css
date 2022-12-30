@@ -184,13 +184,7 @@ strong, b {
 }
 
 .about {
-  background: linear-gradient(
-    to bottom,
-    rgba(3, 0, 31, 0.85),
-    rgba(115, 3, 192, 0.85),
-    rgba(236, 56, 188, 0.85),
-    rgba(253, 239, 249, 0.85)
-  );
+  background: linear-gradient(to bottom, #03001e, #7303c0, #ec38bc, #fdeff9); 
   color: var(--lavender-blush);
   padding-bottom: 40px;
   position: relative;
@@ -575,13 +569,7 @@ strong, b {
 }
 
 footer {
-  background: linear-gradient(
-    to top,
-    rgba(3, 0, 31, 0.85),
-    rgba(115, 3, 192, 0.85),
-    rgba(236, 56, 188, 0.85),
-    rgba(253, 239, 249, 0.85)
-  );
+  background: linear-gradient(to top, #03001e, #7303c0, #ec38bc, #fdeff9); 
   display: flex;
   flex-direction: column;
   align-items: center;
