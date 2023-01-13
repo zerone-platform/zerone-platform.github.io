@@ -623,19 +623,6 @@ footer {
   margin-top: 20px;
 }
 
-.newsletter {
-  height: 30px;
-  width: 80%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 700;
-}
-
-.newsletter > input {
-  width: fit-content;
-}
-
 .contact {
   display: flex;
   flex-direction: column;
