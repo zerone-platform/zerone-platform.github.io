@@ -25,7 +25,7 @@ export const addAPIScript = () => {
   document.body.appendChild(scriptAPI);
 };
 
-export const displayScrollBtn = event => {
+export const displayScrollBtn = () => {
   const scrollBtn = document.querySelector('#goTop');
   let top1 = document.documentElement.scrollTop;
   let top2 = document.body.scrollTop;
@@ -61,20 +61,20 @@ export const showAsideNav = event => {
   };
 };
 
-export const backToTop = event => {
+export const backToTop = () => {
   document.getElementById('navigation').scrollIntoView({behavior: 'smooth', block: 'start'});
 };
  
-export const scrollToTheEnd = event => {
+export const scrollToTheEnd = () => {
   document.getElementById('lastOffer').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
 };
 
 export const changeProjectImage = event => {
-  let dt = event.target.dataset
+  let project = event.target.dataset
 
-  if (event.target.src.includes(dt.primaryImage)) {
-    event.target.src = dt.altImage;
+  if (event.target.src.includes(project.primaryImage)) {
+    event.target.src = project.altImage;
   } else{
-    event.target.src = dt.primaryImage;
+    event.target.src = project.primaryImage;
   };
 };
