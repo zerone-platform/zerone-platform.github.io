@@ -18,13 +18,6 @@ export const setFocusAndTitle = () => {
   document.title = heading.innerText;
 };
 
-export const addAPIScript = () => {
-  const scriptAPI = document.createElement('script');
-  scriptAPI.type = 'text/javascript';
-  scriptAPI.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
-  document.body.appendChild(scriptAPI);
-};
-
 export const displayScrollBtn = () => {
   const scrollBtn = document.querySelector('#goTop');
   let top1 = document.documentElement.scrollTop;
@@ -41,32 +34,59 @@ export const showAsideNav = event => {
   if (event.type === 'click' || event.key === 'Enter') {
       const about = document.querySelector('#about');
       const aside = document.querySelector('#asideNavigation');
+      const width = window.innerWidth;
 
-      if (about.style.top !== "200px") {
-        about.style.top = "200px";
+      const aboutSlideDown = pxDown => {
+        about.style.top = pxDown;
         about.style.transitionDelay = "0s";
         aside.style.left = "0";
         aside.style.transitionDelay = ".3s";
-      } else {
+      };
+
+      const aboutSlideUp = () => {
         aside.style.left = "-100%";
         aside.style.transitionDelay = "0s";
         about.style.top = "0";
         about.style.transitionDelay = ".3s";
       };
 
-      if (event.target.localName === 'a') {
-          document.querySelector('.aside-nav__links .selected').classList.remove('selected');
-          event.target.classList.add('selected');
+      if (about.style.top === "0px") {
+        if (width < 768) {
+          aboutSlideDown("400px");
+        } else if (width < 992) {
+          aboutSlideDown("180px");
+        } else if (width < 1200) {
+          aboutSlideDown("130px");
+        } else {
+          aboutSlideDown("80px");
+        };
+      } else {
+        aboutSlideUp();
       };
   };
 };
 
 export const backToTop = () => {
-  document.getElementById('navigation').scrollIntoView({behavior: 'smooth', block: 'start'});
+  document.getElementById('navigation').scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
 };
  
 export const scrollToTheEnd = () => {
-  document.getElementById('lastOffer').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
+  document.getElementById('lastOffer').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+    inline: 'center'
+  });
+};
+
+export const goToSection = event => {
+  document.getElementById(event.target.dataset.sectionName).scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+    inline: 'center'
+  });
 };
 
 export const changeProjectImage = event => {
