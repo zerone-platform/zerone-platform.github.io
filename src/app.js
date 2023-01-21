@@ -1,4 +1,4 @@
-import { mapListToDOMElements, setFocusAndTitle, changeProjectImage, displayScrollBtn, showAsideNav, backToTop, scrollToTheEnd, goToSection } from "./domInteractions.js";
+import { mapListToDOMElements, setFocusAndTitle, changeProjectImage, displayScrollBtn, showAsideNav, backToTop, scrollToTheEnd } from "./domInteractions.js";
 import { sendFormToAPI } from "./requests.js";
 
 class ZerOne {
@@ -29,8 +29,7 @@ class ZerOne {
         window.addEventListener('scroll', displayScrollBtn);
         this.viewElements.contactForm.addEventListener('submit', this.sendEmail);
         // Listeners with imported functions.
-        Array.from(document.querySelectorAll("aside a")).forEach(link => link.addEventListener('click', showAsideNav));
-        Array.from(document.querySelectorAll('[data-section-name]')).forEach(btn => btn.addEventListener('click', goToSection));
+        Array.from(document.querySelectorAll('[data-section-name]')).forEach(btn => btn.addEventListener('click', showAsideNav));
         Array.from(document.querySelectorAll('[data-alt-image]')).forEach(img => {
             img.addEventListener('mouseover', changeProjectImage);
             img.addEventListener('mouseout', changeProjectImage);
@@ -44,8 +43,8 @@ class ZerOne {
     goToContactForm = event => {
         let contactForm = this.viewElements.contactForm
         let msg = `Dzień dobry.\n\nKontaktuje się w sprawie współpracy długoterminowej w pakiecie "${event.target.dataset.offerName.toUpperCase()}".\nProszę o więcej informacji w odpowiedzi na maila podanego w formularzu.`;
-        contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
         contactForm.message.value = msg;
+        contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
     };
 
     sendEmail = event => {
