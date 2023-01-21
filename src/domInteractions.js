@@ -50,6 +50,14 @@ export const showAsideNav = event => {
         about.style.transitionDelay = ".3s";
       };
 
+      const goToSection = sectionName => {
+        document.getElementById(sectionName).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'center'
+        });
+      };
+
       if (about.style.top === "0px") {
         if (width < 768) {
           aboutSlideDown("400px");
@@ -63,6 +71,10 @@ export const showAsideNav = event => {
       } else {
         aboutSlideUp();
       };
+
+      if (event.target.tagName === 'BUTTON') {
+        goToSection(event.target.dataset.sectionName);
+     };
   };
 };
 
@@ -77,14 +89,6 @@ export const scrollToTheEnd = () => {
   document.getElementById('lastOffer').scrollIntoView({
     behavior: 'smooth',
     block: 'center',
-    inline: 'center'
-  });
-};
-
-export const goToSection = event => {
-  document.getElementById(event.target.dataset.sectionName).scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
     inline: 'center'
   });
 };
